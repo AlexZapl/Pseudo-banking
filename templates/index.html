@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/style.css">
+    {% block head %}
+    <title>{{tit}}</title>
+    {% endblock %}
+</head>
+<header>
+    <nav style="margin-top: 5px">
+        <ul>
+            <li><a href="/?lang={{lang}}">{{homeB}}</a></li>
+            <li><a href="#banking">{{bankB}}</a>
+                <!-- First Tier Drop Down -->
+                <ul>
+                    <li><a href="/banking/card?lang={{lang}}">{{cardB}}</a></li>
+                    <li><a href="/banking/loans?lang={{lang}}">{{loanB}}</a></li>
+                    <li><a href="/banking/history?lang={{lang}}">{{hystB}}</a></li>
+                </ul>
+
+            </li>
+            <li><a href="#about">{{abotB}}</a>
+                <ul>
+                    <li><a href="/contacts?lang={{lang}}">{{contB}}</a></li>
+                </ul>
+            </li>
+            <li><a href="#">{{langb}}</a>
+                <ul>
+                    <li><a href="?lang=eng">English</a></li>
+                    <li><a href="?lang=ru">Русский</a></li>
+                    <li><a href="?lang=lt">Lietuvių</a></li>
+                </ul>
+            </li>
+            <li><a href="/{{a}}?lang={{lang}}">{{log2}}</a>
+        </ul>
+    </nav>
+</header>
+<body>
+{% block content %}
+<br>
+<h1 style="margin-top: 50px">Simple banking</h1>
+<p>It`s simple banking system maked by AlexZapl</p>
+<section id="about">
+    <hr>
+    <h2>{{abotB}}</h2>
+    <hr>
+    <p>{{ab_1}}<br>{{ab_2}}</p>
+</section>
+<section id="banking">
+    <hr>
+    <h2>{{bankB}}</h2>
+    <hr>
+    <p>{{bn_}}
+    <table>
+        <tr>
+            <th>Наименование</th>
+        </tr>
+    </table>
+</section>
+{% endblock %}
+</body>
+<footer><p>@2023 AlexZapl`s online-banking</p></footer>
+</html>

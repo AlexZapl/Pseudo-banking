@@ -1,0 +1,56 @@
+{% extends 'index.html' %}
+{% block head %}
+<link rel="stylesheet" href="static/css/register.css">
+<title>Регистрация</title>
+{% endblock %}
+
+{% block content %}
+<div class="login-box">
+    <p>{{message}}</p>
+    <form action='/register' method='post'>
+        <div class="user-box">
+            <input required="" name="login" type="text">
+            <label>Login</label>
+        </div>
+        <div class="user-box">
+            <input required="" name="password" type="password">
+            <label>Password</label>
+        </div>
+        <div class="user-box">
+            <input required="" name="password_check" type="password">
+            <label>Repeat password</label>
+        </div>
+        <div class="user-box">
+            <input required="" name="phone_number" type="text">
+            <label>Phone number</label>
+        </div>
+        <div class="user-box">
+            <input required="" name="email" type="text">
+            <label>Email</label>
+        </div>
+        <div class="user-box">
+            <input required="" name="name" type="text">
+            <label>Name</label>
+        </div>
+        <div class="user-box">
+            <input required="" name="fname" type="text">
+            <label>FName</label>
+        </div>
+
+        <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <button style="align-items: center" type="submit">
+                Register
+                <div class="arrow-wrapper">
+                    <div class="arrow"></div>
+
+                </div>
+            </button>
+        </a>
+    </form>
+    <p>Already have an account? <a href="/login" class="a2">Log in!</a></p>
+</div>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'index.html' %}
+{% block head %}
+<title>Кредиты</title>
+<link rel="stylesheet" href="/static/css/loans.css">
+<link rel="stylesheet" href="/static/css/login.css">
+{% endblock %}
+{% block content %}
+{% if not getcr %}
+<div class="login-box" style="position: absolute; top: 40%; left: 40%">
+    <p>{{loann}}</p>
+    <form action='/banking/loans?lang={{lang}}' method='post' name="calccr">
+        <h3>{{err}}</h3>
+        <div class="user-box"><input required="" name="dateend" type="date"><label>{{dattxt}}</label></div>
+        <div class="user-box"><input required="" name="loan" type="text"><label>{{loantxt}}</label>
+        </div>
+        <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <button class="button" style="align-items: center" type="submit">
+                {{loanbtn}}
+                <div class="arrow-wrapper">
+                    <div class="arrow"></div>
+                </div>
+            </button>
+        </a>
+    </form>
+    {% if oplm %}<p>{{yloantxt}}: {{loan}} <br> {{oplmtxt}}: {{oplm}} <br> {{tottxt}}: {{oplt}}</p>
+    <form action='/banking/loans?lang={{lang}}' method='post' name="getcr">
+        <button class="button" style="align-items: center" type="submit" name="getcr">
+            {{loanbtn}}
+            <div class="arrow-wrapper">
+                <div class="arrow"></div>
+            </div>
+        </button>
+    </form>
+    {% endif %}
+</div>
+{% endif %}
+{% if getcr %}
+<div class="login-box" style="position: absolute; top: 40%; left: 40%">
+    <p>{{your_loan}}: {{loan}}</p>
+    <form action='/banking/loans?lang={{lang}}' method='post' name="calccr">
+        <h3>{{err}}</h3>
+        <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <button class="button" style="align-items: center" type="submit" name="tot-getcr">
+                {{gloanbtn}}
+                <div class="arrow-wrapper">
+                    <div class="arrow"></div>
+                </div>
+            </button>
+        </a>
+    </form>
+</div>
+{% endif %}
+{% endblock %}

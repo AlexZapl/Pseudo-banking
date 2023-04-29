@@ -1,0 +1,3 @@
+{'homeB': 'Home', 'bankB': 'Bankas', 'cardB': 'Kortelė', 'loanB': 'Kreditai', 'hystB': 'Istorija', 'abotB': 'Apie mus', 'contB': 'Contacts', 'langb': 'Lietuvių'}
+{'tit': 'Home page', 'ab_1': 'Aš(AlexZapl) padariau pseudo-bonkinikystę. Noriu testi darba.', 'ab_2': 'Gal būt padarysiu dar kelias kalbas.', 'bn_': 'Pseudo-bankininkystės sistema bando imituoti internetinius bankus. Nemanau, kad bandau apgauti žmones ir atimti iš jų pinigus :)'}
+{'loann': 'Kreditų kalkuliatorius', 'loanbtn': 'Suskaičioti', 'dattxt': 'Paskolos pabaigos data', 'loantxt': 'Kiek imsite?', 'yloantxt': 'Jūsų kreditas', 'oplmtxt': 'Mėnesinis mokestis', 'tottxt': 'Iš viso sumokėti', 'loan_get': 'Gauti pajamą', 'gloanbtn': 'Gauti', 'your_loan': 'Jūsų pajama'}

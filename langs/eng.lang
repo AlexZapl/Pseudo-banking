@@ -1,0 +1,3 @@
+{"homeB": 'Home', "bankB": 'Banking', "cardB": 'Your card', "loanB": 'Loans', "hystB": 'History', "abotB": 'About', "contB": 'Contacts', 'langb': 'English'}
+{'tit': 'Home page', 'ab_1': 'I (AlexZapl) am creating a pseudo-banking system for fun. I plan to develop it further.', 'ab_2': 'Maybe I will make multiple languages.', 'bn_': "The pseudo-banking system attempts to mimic online banks. Don't think that I'm trying to scam people out of money :)"}
+{'loann': 'Loan calculator', 'loanbtn': 'Calculate', 'dattxt': 'Loan end date', 'loantxt': 'How much do you take', 'yloantxt': 'Your loan', 'oplmtxt': 'Monthly fee', 'tottxt': 'Total fee', 'loan_get': 'Get loan', 'gloanbtn': 'Get', 'your_loan': 'Your loan'}
