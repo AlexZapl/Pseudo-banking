@@ -347,6 +347,7 @@ def loans():
 def err404(e):
     return render_template('404page.html'), 404
 
+
 @app.errorhandler(500)
 def err500(e):
     return render_template('500page.html'), 500
