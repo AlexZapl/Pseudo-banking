@@ -214,7 +214,7 @@ def card():
     print(user)
     id_ = db.users.get('login', user)
     print(id_.id)
-    carduser_ = db.card.get('userid', id_.d)
+    carduser_ = db.card.get('userid', id_.id)
     cardnumber = carduser_.cardid
     expires_ = str(carduser_.enddate)
     name_ = f'{id_.name} {id_.fname}'
@@ -253,7 +253,7 @@ def contacts():
         a = 'logout'
         log2 = 'Logout'
 
-    return render_template('contacts.html', a=a, log2=log2, **Buttons)
+    return render_template('contacts.html', a=a, log2=log2, **Buttons, lang=lang)
 
 
 @app.route('/banking/loans', methods=['GET', 'POST'])
@@ -342,6 +342,9 @@ def loans():
 
     return render_template('loans.html', a=a, log2=log2, **Buttons, **content_, lang=lang)
 
+@app.route('/e500')
+def e500():
+    pass
 
 @app.errorhandler(404)
 def err404(e):
